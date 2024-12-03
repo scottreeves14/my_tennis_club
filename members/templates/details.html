@@ -1,9 +1,11 @@
 {% extends "master.html" %}
+{% load static %}
 
 {% block title %}
   Details about {{ mymember.firstname }} {{ mymember.lastname }}
 {% endblock %}
 
+<link rel="stylesheet" href="{% static 'main.css' %}">
 
 {% block content %}
   <h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
