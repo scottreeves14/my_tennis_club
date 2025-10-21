@@ -9,6 +9,7 @@ con = sqlite3.connect("db.sqlite3")
 cur = con.cursor()
 
 # Open the text file for reading. We need to set ',' as the delimiter since this is how most files are setup!
+# This may need some error checking ...
 with open('import_csv.txt') as f:
     reader = csv.reader(f, delimiter=',')
     for row in reader:
@@ -16,7 +17,7 @@ with open('import_csv.txt') as f:
         try:
             cur.execute("INSERT INTO members_member (firstname, lastname, phone, joined_date) VALUES(?,?,?,?)", row)
         except sqlite3.Error as error: 
-            print("Error inserting vale into table.")
+            print("Error inserting value into table.")
 print("Committing changes ...")
 try:
     con.commit()
