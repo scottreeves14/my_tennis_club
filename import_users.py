@@ -1,10 +1,14 @@
+# setup access to sqlite3 by importing sqlite3
 import sqlite3
 
+# Pull in the csv modules
 import csv
 
+# Setup connection to default sqlite3 database
 con = sqlite3.connect("db.sqlite3")
 cur = con.cursor()
 
+# Open the text file for reading. We need to set ',' as the delimiter since this is how most files are setup!
 with open('import_csv.txt') as f:
     reader = csv.reader(f, delimiter=',')
     for row in reader:
