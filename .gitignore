@@ -3,3 +3,4 @@
 *.pyc
 members/_pycache_/*
 my_tennis_club/_pycache_/*
+db.sqlite3
