@@ -1,6 +1,4 @@
-A,Person,,
-Out,There,,
-Some,Where,,
-I,N,1989,
-Sam,Pennington,1965,
-Scott,Reeves,1966,
+
+Karen, Wilson,1972,
+Brett,Muras,1992,
+Amanda,Train,1980,
